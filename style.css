@@ -125,10 +125,32 @@
     }
 }
 
+/* ESERCIZIO 11 */
 .ex-11-icon {
-    font-size: 60px;
+    font-size: 60px;    
 }
 
+.ex-11-icon:hover {
+    animation-name: spin-b;
+    animation-duration: 2s;
+    animation-direction: linear;    
+}
+
+@keyframes spin-b {
+    0% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(315deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* -------- */
 
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -144,8 +166,6 @@
     text-decoration: none;
 }
 
-
-
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -155,8 +175,6 @@
     height: 20px;
 }
 
-
-
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -165,3 +183,95 @@
     width: 60px;
     height: 20px;
 }
+
+/* ESERCIZIO 12 */
+.ex-12-top-white {
+    animation-name: bottone-animato;
+    animation-duration: 3s;
+    animation-direction: linear;
+}
+
+@keyframes bottone-animato {
+    0% {
+        left: 10%;
+    }
+
+    25% {
+        left: 30%;
+    }
+
+    75% {
+        left: 60%;
+    }
+
+    100% {
+        left: 10%;
+    }
+    
+}
+
+/* ESERCIZIO 13 */
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: girocompleto-su;
+    animation-duration: 3s;
+    animation-direction: linear;
+}
+
+@keyframes girocompleto-su {
+    0% {
+        top: -10px; 
+        left: 10%;
+    }    
+
+    25% {
+        top: -10px;
+        left: calc(100% - 30px);
+    }
+
+    50% {
+        top: 100%;
+        left: calc(100% - 30px);
+    }
+
+    75% {
+        top: 100%;
+        left: 0;
+    }
+
+    100% {
+        top: 10%;
+        left: -15px;
+    }
+    
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: girocompleto 3s linear;
+}
+
+@keyframes girocompleto {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    
+    25% {
+        bottom: -10px;
+        right: calc(100% - 40px);
+    }
+
+    50% {
+        bottom: 100%;
+        right: calc(100% - 40px);
+    }
+
+    75% {
+        bottom: 100%;
+        right: 0;
+    }
+
+    100% {
+        bottom: -10px;
+        right: -10px;
+    }
+}   
